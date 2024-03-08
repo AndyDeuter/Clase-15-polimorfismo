@@ -1,28 +1,52 @@
-class AutoF1 {
-    constructor(numero, equipo) {
-      this.numero = numero;
-      this.equipo = equipo;
-    }
-  
-    acelerar() {
-      console.log(`El auto número ${this.numero} del equipo ${this.equipo} está acelerando.`);
-    }
+class Persona {
+  constructor(nombre) {
+    this.nombre = nombre;
   }
-  
-  class RedBull extends AutoF1 {
-    acelerar() {
-      console.log(`El auto número ${this.numero} del equipo Red Bull está acelerando a toda velocidad.`);
-    }
+
+  presentarse() {
+    console.log(`Hola, soy ${this.nombre}.`);
   }
-  
-  class Mercedes extends AutoF1 {
-    acelerar() {
-      console.log(`El auto número ${this.numero} del equipo Mercedes está demostrando su potencia.`);
-    }
+}
+
+class Mama extends Persona {
+  constructor(nombre) {
+    super(nombre);
   }
-  
-  let autoRedBull = new RedBull(33, 'Red Bull Racing');
-  let autoMercedes = new Mercedes(44, 'Mercedes-AMG Petronas');
-  
-  autoRedBull.acelerar(); 
-  autoMercedes.acelerar(); 
+
+  prepararCena() {
+    console.log(`${this.nombre} está preparando la cena.`);
+  }
+}
+
+class Yo extends Persona {
+  constructor(nombre) {
+    super(nombre);
+  }
+
+  arreglarMesa() {
+    console.log(`${this.nombre} está arreglando la mesa para la cena.`);
+  }
+}
+
+class Hermana extends Persona {
+  constructor(nombre) {
+    super(nombre);
+  }
+
+  arreglarMesa() {
+    console.log(`${this.nombre} también está ayudando a arreglar la mesa.`);
+  }
+}
+
+let mama = new Mama('Mamá');
+let yo = new Yo('Andy');
+let hermana = new Hermana('Brianna');
+
+mama.presentarse(); 
+yo.presentarse(); 
+hermana.presentarse(); 
+
+mama.prepararCena(); 
+yo.arreglarMesa();   
+hermana.arreglarMesa(); 
+
