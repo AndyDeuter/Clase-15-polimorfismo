@@ -1,0 +1,28 @@
+class Pokemon {
+    constructor(nombre, tipo) {
+      this.nombre = nombre;
+      this.tipo = tipo;
+    }
+  
+    atacar() {
+      console.log(`${this.nombre} usa un ataque.`);
+    }
+  }
+  
+  class Pikachu extends Pokemon {
+    atacar() {
+      console.log(`${this.nombre} utiliza Impactrueno!`);
+    }
+  }
+  
+  class Bulbasaur extends Pokemon {
+    atacar() {
+      console.log(`${this.nombre} utiliza Látigo cepa!`);
+    }
+  }
+  
+  let miPikachu = new Pikachu('Pikachu', 'Eléctrico');
+  let miBulbasaur = new Bulbasaur('Bulbasaur', 'Planta');
+  
+  miPikachu.atacar();   
+  miBulbasaur.atacar(); 
