@@ -1,0 +1,28 @@
+class AutoF1 {
+    constructor(numero, equipo) {
+      this.numero = numero;
+      this.equipo = equipo;
+    }
+  
+    acelerar() {
+      console.log(`El auto número ${this.numero} del equipo ${this.equipo} está acelerando.`);
+    }
+  }
+  
+  class RedBull extends AutoF1 {
+    acelerar() {
+      console.log(`El auto número ${this.numero} del equipo Red Bull está acelerando a toda velocidad.`);
+    }
+  }
+  
+  class Mercedes extends AutoF1 {
+    acelerar() {
+      console.log(`El auto número ${this.numero} del equipo Mercedes está demostrando su potencia.`);
+    }
+  }
+  
+  let autoRedBull = new RedBull(33, 'Red Bull Racing');
+  let autoMercedes = new Mercedes(44, 'Mercedes-AMG Petronas');
+  
+  autoRedBull.acelerar(); 
+  autoMercedes.acelerar(); 
